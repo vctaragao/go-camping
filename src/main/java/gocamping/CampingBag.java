@@ -71,11 +71,16 @@ public class CampingBag {
         }
     }
 
+    /*
+     * Remove the item from the bag, warn it to the user
+     * and return the item removed to the main class to include it to the itemsList.
+     */
     public Item RemoveItem(int value) {
-        /*
-         * Remove the item from the bag, warn it to the user
-         * and return the item removed to the main class to include it to the itemsList.
-         */
+
+        if (value > bagContents.size() - 1) {
+            return null;
+        }
+
         Item item = bagContents.get(value);
         bagContents.remove(value);
         SetActualSize(GetActualSize() - item.getSize());
