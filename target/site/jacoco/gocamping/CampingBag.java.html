@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="pt"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>CampingBag.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">GoCamping</a> &gt; <a href="index.source.html" class="el_package">gocamping</a> &gt; <span class="el_source">CampingBag.java</span></div><h1>CampingBag.java</h1><pre class="source lang-java linenums">/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package gocamping;
+
+import gocamping.items.Item;
+import java.util.ArrayList;
+
+/**
+ * YOU WILL NEED TO ADJUST SOME OF THIS CODE AND/OR ADD YOUR OWN CODE!
+ *
+ * @author STUDENT DETAILS HERE
+ */
+public class CampingBag {
+
+<span class="fc" id="L18">    private int ActualSize = 0;</span>
+    private int capacity;
+<span class="fc" id="L20">    private ArrayList&lt;Item&gt; bagContents = new ArrayList&lt;Item&gt;();</span>
+
+    /**
+     * Create a camping bag with a given capacity
+     *
+     * @param capacity - the capacity as an int
+     */
+<span class="fc" id="L27">    public CampingBag(int capacity) {</span>
+<span class="fc" id="L28">        this.capacity = capacity;</span>
+<span class="fc" id="L29">    }</span>
+
+    /**
+     * CODE TO BE COMPLETED BY STUDENT
+     * YOU NEED TO UPDATE THE COMMENTS ALSO!
+     *
+     * @return true if bag is full, else false
+     */
+    public boolean isFull(Item thingToAdd) {
+        // If the bag is full then true, else false. Setting 100 to limit of the bag.
+
+<span class="fc bfc" id="L40" title="All 2 branches covered.">        if (ActualSize + thingToAdd.getSize() &gt; capacity) {</span>
+<span class="fc" id="L41">            return true;</span>
+        } else {
+<span class="fc" id="L43">            SetActualSize(ActualSize + thingToAdd.getSize());</span>
+<span class="fc" id="L44">            return false;</span>
+
+        }
+    }
+
+    /**
+     * CODE TO BE COMPLETED BY STUDENT
+     * YOU NEED TO UPDATE THE COMMENTS ALSO!
+     *
+     * @param thingToAdd - an object that is an Item or a sub-class of Item - to be
+     *                   added to the bag contents
+     * @return - true if the item added successfully; false if the item could not be
+     *         added
+     */
+    public boolean addItem(Item thingToAdd) {
+        /*
+         * Verify if the bag is full, if it is then warn the user,
+         * else add the item to the bag and confirm that by message to the user
+         */
+<span class="fc bfc" id="L63" title="All 2 branches covered.">        if (isFull(thingToAdd)) {</span>
+<span class="fc" id="L64">            System.out.println(&quot;The item is bigger then the actual capacity, please try again.&quot;);</span>
+<span class="fc" id="L65">            return false;</span>
+        } else {
+
+<span class="fc" id="L68">            bagContents.add(thingToAdd);</span>
+<span class="fc" id="L69">            System.out.println(&quot;Added &quot; + thingToAdd + &quot; to the bag!&quot;);</span>
+<span class="fc" id="L70">            return true;</span>
+        }
+    }
+
+    public Item RemoveItem(int value) {
+        /*
+         * Remove the item from the bag, warn it to the user
+         * and return the item removed to the main class to include it to the itemsList.
+         */
+<span class="nc" id="L79">        Item item = bagContents.get(value);</span>
+<span class="nc" id="L80">        bagContents.remove(value);</span>
+<span class="nc" id="L81">        SetActualSize(GetActualSize() - item.getSize());</span>
+<span class="nc" id="L82">        System.out.println(item + &quot; removed from the bag!&quot;);</span>
+<span class="nc" id="L83">        return item;</span>
+    }
+
+    /*
+     * YOU MAY ADD ADDITIONAL METHODS HERE TO COMPLETE OTHER TASKS
+     * REMEMBER THAT METHODS FOR A &quot;CAMPINGBAG&quot; MUST MAKE SENSE!
+     */
+
+    /* Getters and Setters */
+    public ArrayList&lt;Item&gt; getBagContents() {
+<span class="fc" id="L93">        return bagContents;</span>
+    }
+
+    private void SetActualSize(int val) {
+<span class="fc" id="L97">        this.ActualSize = val;</span>
+<span class="fc" id="L98">    }</span>
+
+    public int GetActualSize() {
+<span class="fc" id="L101">        return ActualSize;</span>
+    }
+
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.8.202204050719</span></div></body></html>

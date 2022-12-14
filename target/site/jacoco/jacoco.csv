@@ -1,0 +1,16 @@
+GROUP,PACKAGE,CLASS,INSTRUCTION_MISSED,INSTRUCTION_COVERED,BRANCH_MISSED,BRANCH_COVERED,LINE_MISSED,LINE_COVERED,COMPLEXITY_MISSED,COMPLEXITY_COVERED,METHOD_MISSED,METHOD_COVERED
+GoCamping,gocamping,App,305,69,17,2,83,12,12,2,2,1
+GoCamping,gocamping,CampingBag,30,71,0,4,5,19,1,8,1,6
+GoCamping,gocamping.items,Rope,9,0,0,0,4,0,2,0,2,0
+GoCamping,gocamping.items,Repellent,9,0,0,0,4,0,2,0,2,0
+GoCamping,gocamping.items,Battery,4,5,0,0,2,2,1,1,1,1
+GoCamping,gocamping.items,Item,0,18,0,0,0,7,0,4,0,4
+GoCamping,gocamping.items,Lighter,4,5,0,0,2,2,1,1,1,1
+GoCamping,gocamping.items,Maps,9,0,0,0,4,0,2,0,2,0
+GoCamping,gocamping.items,SwitchBlade,17,0,0,0,8,0,4,0,4,0
+GoCamping,gocamping.items,Knife,4,5,0,0,2,2,1,1,1,1
+GoCamping,gocamping.items,PurifyingCanteen,20,0,0,0,11,0,3,0,3,0
+GoCamping,gocamping.items,FirstAidKit,9,0,0,0,4,0,2,0,2,0
+GoCamping,gocamping.items,Canteen,12,0,0,0,6,0,3,0,3,0
+GoCamping,gocamping.items,Sunscreen,9,0,0,0,4,0,2,0,2,0
+GoCamping,gocamping.items,BatteryWithFlashlight,9,0,0,0,4,0,2,0,2,0
